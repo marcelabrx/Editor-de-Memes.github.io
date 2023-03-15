@@ -14,3 +14,15 @@ $("#light-theme").addEventListener("click", () =>{
         $("body").setAttribute("data-theme", "dark_theme")
     }
 })
+$("#dark-theme").addEventListener("click", () =>{
+    const addTheme = $("body").getAttribute("data-theme")
+    if ("body" != addTheme){
+        $("#dark-theme").classList.add("hidden")
+        $("#light-theme").classList.remove("hidden")
+        $("body").setAttribute("data-theme", "dark_theme")
+    } else{
+        $("#dark-theme").classList.remove("hidden")
+        $("#light-theme").classList.add("hidden")
+        $("body").removeAttribute("data-theme", "dark_theme")
+    }
+})
