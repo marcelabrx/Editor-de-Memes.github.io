@@ -339,7 +339,7 @@ input[type = "color"]:active,
     .aside{
         height: 100vh;
         position: fixed;
-        /* overflow:scroll; */
+        overflow-y:scroll;
         right: 0;
         top: 0;
         background-color: var(--body-background-color);
