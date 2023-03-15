@@ -30,7 +30,7 @@ $("#dark-theme").addEventListener("click", () =>{
 //panel image
 $("#image_btn").addEventListener("click", () =>{
     const regAction = $("body").getAttribute("hidden")
-    if ("body" =! regAction){
+    if ("body" === regAction){
         $(".edition__image").classList.add("hidden")
         $(".btn__xmark").classList.add("hidden")
         $(".edition__text").classList.remove("hidden")
