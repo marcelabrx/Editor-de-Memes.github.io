@@ -31,10 +31,10 @@ $("#dark-theme").addEventListener("click", () =>{
 $("#image_btn").addEventListener("click", () =>{
     const regAction = $("body").getAttribute("hidden")
     if ("body" === regAction){
-        $(".edition__image").classList.remove("hidden")
-        $(".btn__xmark").classList.remove("hidden")
-    } else {
         $(".edition__image").classList.add("hidden")
         $(".btn__xmark").classList.add("hidden")
+    } else {
+        $(".edition__image").classList.remove("hidden")
+        $(".btn__xmark").classList.remove("hidden")
     }
 })
