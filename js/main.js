@@ -42,6 +42,7 @@ $("#txt_btn").addEventListener("click", () =>{
 })
 
 $(".btn__xmark ").addEventListener("click", () => {
-    $(".edition__image").classList.add("hidden") || $(".edition__text").classList.add("hidden")
+    // $(".edition__image").classList.add("hidden") || $(".edition__text").classList.add("hidden")
+    $(".aside").style.display = "none"
     $(".btn__xmark").classList.add("hidden")
 })
