@@ -26,3 +26,15 @@ $("#dark-theme").addEventListener("click", () =>{
         $("body").removeAttribute("data-theme", "dark_theme")
     }
 })
+
+//panel image
+$("#image_btn").addEventListener("click", () =>{
+    const regAction = $("body").getAttribute("hidden")
+    if ("body" === regAction){
+        $(".edition__image").classList.remove("hidden")
+        $(".btn__xmark").classList.remove("hidden")
+    } else {
+        $(".edition__image").classList.add("hidden")
+        $(".btn__xmark").classList.add("hidden")
+    }
+})
