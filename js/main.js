@@ -33,8 +33,10 @@ $("#image_btn").addEventListener("click", () =>{
     if ("body" =! regAction){
         $(".edition__image").classList.add("hidden")
         $(".btn__xmark").classList.add("hidden")
+        $(".edition__text").classList.remove("hidden")
     } else {
         $(".edition__image").classList.remove("hidden")
         $(".btn__xmark").classList.remove("hidden")
+        $(".edition__text").classList.add("hidden")
     }
 })
