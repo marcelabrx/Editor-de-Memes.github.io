@@ -34,9 +34,11 @@ $("#image_btn").addEventListener("click", () =>{
         $(".edition__image").classList.add("hidden")
         $(".btn__xmark").classList.add("hidden")
         $(".edition__text").classList.remove("hidden")
+        $("body").setAttribute("hidden", "flex")
     } else {
         $(".edition__image").classList.remove("hidden")
         $(".btn__xmark").classList.remove("hidden")
         $(".edition__text").classList.add("hidden")
+        $("body").removeAttribute("hidden", "flex")
     }
 })
