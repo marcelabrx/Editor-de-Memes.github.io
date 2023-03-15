@@ -337,6 +337,7 @@ input[type = "color"]:active,
         margin: 10px;
     }
     .aside{
+        height: 100vh;
         position: fixed;
         overflow:scroll;
         right: 0;
@@ -344,10 +345,10 @@ input[type = "color"]:active,
         background-color: var(--body-background-color);
         padding: 0 15px 10px;
         margin: 0;
-        /*box-shadow: -3px 0px 13px 0px rgba(105,105,105,0.57);
+        box-shadow: -3px 0px 13px 0px rgba(105,105,105,0.57);
         -webkit-box-shadow: -3px 0px 13px 0px rgba(105,105,105,0.57);
         -moz-box-shadow: -3px 0px 13px 0px rgba(105,105,105,0.57);
-        height: 100vh; */
+        font-size: 1.2rem;
     }
     .aside__title{
         padding: 10px 0;
