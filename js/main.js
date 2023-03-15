@@ -32,6 +32,4 @@ $("#image_btn").addEventListener("click", () =>{
     $(".edition__image").classList.remove("hidden")
     $(".btn__xmark").classList.remove("hidden")
     $(".edition__text").classList.add("hidden")
-    $(".header").classList.add("hidden")
-    $(".main").classList.add("hidden")
 })

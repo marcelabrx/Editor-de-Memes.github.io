@@ -398,9 +398,9 @@ input[type = "color"]:active,
     .btn__xmark{
         display: none;
     }
-    .edition__image{
+    /* .edition__image{
         display: block;
-    }
+    } */
     .navbar__btn:hover,
     .general__style-edition_section:hover,
     input[type = "color"]:hover,
