@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Styles-->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Editor de Memes</title>
+    <link rel="icon" href="./img/generador_memes.ico">
+</head>
+<body>
+    <!--*********HEADER***********-->
+    <header class="header">
+        <h1 class="header__title">Generador de Memes</h1>
+        <!--*******nav-bar options section*******-->
+        <nav class="header__navbar">
+            <button id="image_btn" class="navbar__btn">
+                <i class="fa-solid fa-file-image icon"></i> 
+                Imagen
+            </button>
+            <button id="txt_btn" class="navbar__btn" aria-hidden="true">
+                <i class="fas fa-font icon"></i>
+                Texto
+            </button>
+            <button id="dark-theme" class="navbar__btn" aria-hidden="true">
+                <i class="fa-solid fa-lightbulb icon" id="lightbulb-on"></i>
+                Modo Oscuro
+            </button>
+            <button id="light-theme" class="navbar__btn hidden"> 
+                <i class="fa-regular fa-lightbulb icon"></i>
+                Modo Claro
+            </button>
+        </nav>
+    </header>
+    <!--*********MAIN***********-->
+    <main class="main">
+        <!--*******meme preview section*******-->
+        <section class="main__section">
+            <p class="section__text">top text</p>
+            <div class="section__box"></div>
+            <p class="section__text">bottom text</p>
+        </section>
+        <button class="btn__green">
+            <i class="fa-solid fa-download"></i> Descargar meme
+        </button>
+    </main>
+    <!--*********ASIDE***********-->
+    <aside class="aside">
+        <!--*******meme edition section*******-->
+        <!-- image section-->
+        <button class="btn__xmark hidden" value="cerrar"><i class="fa-solid fa-xmark "></i></button>
+        <section class="edition__image hidden">
+            <h2 class="aside__title">IMAGEN</h2>
+            <fieldset>
+                <legend>URL</legend>
+                <input type="text" name="" id="" class="general__style-edition_section">
+            </fieldset>
+            <fieldset class="section__background_meme"> 
+                <legend>FONDO</legend>
+                <div class="background__meme_color general_input_color general__style-edition_section">
+                    <input type="color" name="" id="colorFond" value="#FFFFFF">
+                    <label for="colorFond" class="background__meme_color">#FFFFFF</label>
+                </div>
+                <select class="background__meme_option general__style-edition_section">
+                    <option value="">Ninguno</option>
+                    <option value="">Aclarar</option>
+                    <option value="">Oscurecer</option>
+                    <option value="">Diferencia</option>
+                    <option value="">Luminosidad</option>
+                    <option value="">Multiplicar</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>FILTROS</legend>
+                <div class="filter__box">
+                    <label for="">BRILLO</label>
+                    <input type="range" name="" id="" value="100">
+                </div>
+                <div class="filter__box">
+                    <label for="">OPACIDAD</label>
+                    <input type="range" name="" id="" value="100">
+                </div>
+                <div class="filter__box"> 
+                    <label for="">CONTRASTE</label>
+                    <input type="range" name="" id="" value="0">
+                </div class="filter__box">
+                <div class="filter__box">
+                    <label for="">DESENFOQUE</label>
+                    <input type="range" name="" id="" value="0">
+                </div>
+                <div class="filter__box">
+                    <label for="">ESCALA DE GRISES</label>
+                    <input type="range" name="" id="" value="0">
+                </div>
+                <div class="filter__box">
+                    <label for="">SEPIA</label>
+                    <input type="range" name="" id="" value="0">
+                </div>
+                <div class="filter__box">
+                    <label for="">HUE</label>
+                    <input type="range" name="" id="" value="0">
+                </div>
+                <div class="filter__box">
+                    <label for="">SATURADO</label>
+                    <input type="range" name="" id="" value="0">
+                </div>
+                <div class="filter__box">
+                    <label for="">NEGATIVO</label>
+                    <input type="range" name="" id="" value="0">
+                </div>
+            </fieldset>
+            <button type="submit" class="btn__reset general__style-edition_section">Reestablecer Filtros</button>
+        </section>
+        <!-- text section-->
+        <section class="edition__text hidden">
+            <h2 class="aside__title">TEXTO</h2>
+            <fieldset class="section__txt">
+                <legend for="">SUPERIOR</legend>
+                <!--usar input txt-->
+                <input type="text" name="" id="" value="TOP TEXT" class="info__txt general__style-edition_section"></input>
+                <input type="checkbox" name="" id="superior_check"> 
+                <label for="superior_check" class="section__txt-checkbox">Sin texto superior</label>
+            </fieldset>
+            <fieldset class="section__txt">
+                <legend for="">INFERIOR</legend>
+                <input type="text" name="" id="" value="BOTTOM TEXT" class="info__txt general__style-edition_section"></input>
+                <input type="checkbox" name="" id="inferior_check"> 
+                <label for="inferior_check" class="label_checkbox">Sin texto inferior</label> 
+            </fieldset>
+            <fieldset> 
+                <legend>FUENTE</legend>
+                <select class="general__style-edition_section info__txt">
+                    <option value="">Arial</option>
+                    <option value="">Arial Black</option>
+                    <option value="">Andale Mono</option>
+                    <option value="">Comic Sans MS</option>
+                    <option value="">Helvetica</option>
+                    <option value="">Impact</option>
+                    <option value="">Verdana</option>
+                    <option value="">Times New Roman</option>
+                </select>
+                <div class="section__text_font">
+                    <input type="number" name="" id="font_number" min="12" value="16" class="general__style-edition_section">
+                    <button class="align_txt general__style-edition_section"><i class="fa-solid fa-align-right icon"></i></button>
+                    <button class="align_txt general__style-edition_section"><i class="fa-solid fa-align-justify icon"></i></button>
+                    <button class="align_txt general__style-edition_section"><i class="fa-solid fa-align-left icon"></i></button>
+                </div>
+            </fieldset>
+            <fieldset >
+                <section class="section__txt_back-color">
+                    <article class="section__txt_width">
+                        <legend for="">COLOR</legend>
+                        <div class="general_input_color general__style-edition_section">
+                            <input type="color" name="" id="color_txt" >
+                            <label for="color_txt">#000000</label>
+                        </div> 
+                    </article>
+                    <article class="section__txt_width">
+                        <legend>FONDO</legend> 
+                        <div class="general_input_color general__style-edition_section">
+                            <input type="color" name="" id="found_txt" value="#FFFFFF">
+                            <label for="found_txt">#FFFFFF</label>
+                        </div> 
+                    </article>
+                </section>
+                <input type="checkbox" name="" id="transparent_back">
+                <label for="transparent_back" class="label_checkbox">Fondo transparente</label> 
+            </fieldset>
+            <fieldset class="section__txt_contour">
+                <legend>CONTORNO</legend>
+                <button class="general__style-edition_section btn__contour">Ninguno</button>
+                <button class="general__style-edition_section btn__contour">Claro</button>
+                <button class="general__style-edition_section btn__contour">Oscuro</button>
+            </fieldset>
+            <fieldset>
+                <legend>ESPACIADO</legend>
+                <input type="number" name="" id="" min="10" max="50" value="6" class="general__style-edition_section info__txt">
+            </fieldset>
+            <fieldset>
+                <legend>INTERLINEADO</legend>
+                <select name="" id="" class="general__style-edition_section info__txt">
+                    <option value="">0.8</option>
+                    <option value="">1</option>
+                    <option value="">1.2</option>
+                    <option value="">1.5</option>
+                    <option value="">2</option>
+                    <option value="">2.5</option>
+                </select>
+            </fieldset>
+        </section>
+    </aside>
+    <script src="./js/main.js"></script>
+</body>
+</html>
