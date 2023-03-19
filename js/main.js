@@ -96,3 +96,17 @@ $("#saturation").addEventListener("input", filter)
 
 //negative
 $("#negative").addEventListener("input", filter)
+
+//btn reset filters
+$(".btn__reset").addEventListener("click", () =>{
+    $("#brightness").value = "1"
+    $("#opacity").value = "1"
+    $("#contrast").value = "100"
+    $("#blur").value = "0"
+    $("#gray__scale").value = "0"
+    $("#sepia").value = "0"
+    $("#hue").value = "0"
+    $("#saturation").value = "100"
+    $("#negative").value = "0"
+    $(".section__box").style.filter = "none"
+})
