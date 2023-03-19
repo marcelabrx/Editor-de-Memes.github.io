@@ -65,48 +65,34 @@ $("#blend__img").addEventListener("input", () =>{
     $(".section__box").style.backgroundBlendMode = $("#blend__img").value
 })
 
-//filters
+//------filters-------
+const filter = () => {
+    $(".section__box").style.filter = `brightness(${$("#brightness").value}) opacity(${$("#opacity").value}) contrast(${$("#contrast").value}%) blur(${$("#blur").value}px) grayscale(${$("#gray__scale").value}%) sepia(${$("#sepia").value}%) hue-rotate(${$("#hue").value}deg) saturate(${$("#saturation").value}%) invert(${$("#negative").value})`
+}
+
 //brightness
-$("#brightness").addEventListener("input", () =>{
-    $(".section__box").style.filter = `brightness(${$("#brightness").value})`
-})
+$("#brightness").addEventListener("input", filter)
 
 //opacity
-$("#opacity").addEventListener("input", () =>{
-    $(".section__box").style.filter = `opacity(${$("#opacity").value})`
-})
+$("#opacity").addEventListener("input", filter)
 
 //contrast
-$("#contrast").addEventListener("input", () =>{
-    $(".section__box").style.filter = `contrast(${$("#contrast").value}%)`
-})
+$("#contrast").addEventListener("input", filter)
 
 //blur
-$("#blur").addEventListener("input", () =>{
-    $(".section__box").style.filter = `blur(${$("#blur").value}px)`
-})
+$("#blur").addEventListener("input", filter)
 
 //greyScale
-$("#gray__scale").addEventListener("input", () =>{
-    $(".section__box").style.filter = `grayscale(${$("#gray__scale").value}%)`
-})
+$("#gray__scale").addEventListener("input", filter)
 
 //sepia
-$("#sepia").addEventListener("input", () =>{
-    $(".section__box").style.filter = `sepia(${$("#sepia").value}%)`
-})
+$("#sepia").addEventListener("input", filter)
 
 //hue
-$("#hue").addEventListener("input", () =>{
-    $(".section__box").style.filter = `hue-rotate(${$("#hue").value}deg)`
-})
+$("#hue").addEventListener("input", filter)
 
 //saturation
-$("#saturation").addEventListener("input", () =>{
-    $(".section__box").style.filter = `saturate(${$("#saturation").value}%)`
-})
+$("#saturation").addEventListener("input", filter)
 
 //negative
-$("#negative").addEventListener("input", () =>{
-    $(".section__box").style.filter = `invert(${$("#negative").value})`
-})
+$("#negative").addEventListener("input", filter)
