@@ -59,3 +59,8 @@ $("#url__meme").addEventListener("input", () =>{
 $("#back__color").addEventListener("input", () =>{
     $(".section__box").style.backgroundColor =  $("#back__color").value
 })
+
+//blend image
+$("#blend__img").addEventListener("input", () =>{
+    $(".section__box").style.backgroundBlendMode = $("#blend__img").value
+})
