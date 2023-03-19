@@ -64,3 +64,49 @@ $("#back__color").addEventListener("input", () =>{
 $("#blend__img").addEventListener("input", () =>{
     $(".section__box").style.backgroundBlendMode = $("#blend__img").value
 })
+
+//filters
+//brightness
+$("#brightness").addEventListener("input", () =>{
+    $(".section__box").style.filter = `brightness(${$("#brightness").value})`
+})
+
+//opacity
+$("#opacity").addEventListener("input", () =>{
+    $(".section__box").style.filter = `opacity(${$("#opacity").value})`
+})
+
+//contrast
+$("#contrast").addEventListener("input", () =>{
+    $(".section__box").style.filter = `contrast(${$("#contrast").value}%)`
+})
+
+//blur
+$("#blur").addEventListener("input", () =>{
+    $(".section__box").style.filter = `blur(${$("#blur").value}px)`
+})
+
+//greyScale
+$("#gray__scale").addEventListener("input", () =>{
+    $(".section__box").style.filter = `grayscale(${$("#gray__scale").value}%)`
+})
+
+//sepia
+$("#sepia").addEventListener("input", () =>{
+    $(".section__box").style.filter = `sepia(${$("#sepia").value}%)`
+})
+
+//hue
+$("#hue").addEventListener("input", () =>{
+    $(".section__box").style.filter = `hue-rotate(${$("#hue").value}deg)`
+})
+
+//saturation
+$("#saturation").addEventListener("input", () =>{
+    $(".section__box").style.filter = `saturate(${$("#saturation").value}%)`
+})
+
+//negative
+$("#negative").addEventListener("input", () =>{
+    $(".section__box").style.filter = `invert(${$("#negative").value})`
+})
