@@ -54,3 +54,8 @@ $(".btn__xmark ").addEventListener("click", () => {
 $("#url__meme").addEventListener("input", () =>{
     $(".section__box").style.backgroundImage = `url(${$("#url__meme").value})`
 })
+
+//color back-image
+$("#back__color").addEventListener("input", () =>{
+    $(".section__box").style.backgroundColor =  $("#back__color").value
+})
