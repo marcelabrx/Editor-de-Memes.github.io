@@ -43,9 +43,9 @@
     <main class="main">
         <!--*******meme preview section*******-->
         <section class="main__section">
-            <p class="section__text">top text</p>
+            <p id="superior__text" class="section__text">TOP TEXT</p>
             <div class="section__box"></div>
-            <p class="section__text">bottom text</p>
+            <p id="inferior__text" class="section__text">BOTTOM TEXT</p>
         </section>
         <button class="btn__green">
             <i class="fa-solid fa-download"></i> Descargar meme
@@ -123,14 +123,13 @@
             <h2 class="aside__title">TEXTO</h2>
             <fieldset class="section__txt">
                 <legend for="">SUPERIOR</legend>
-                <!--usar input txt-->
-                <input type="text" name="" id="" value="TOP TEXT" class="info__txt general__style-edition_section"></input>
+                <input type="text" name="top__text" id="top__text" value="TOP TEXT" class="info__txt general__style-edition_section"></input>
                 <input type="checkbox" name="" id="superior_check"> 
                 <label for="superior_check" class="section__txt-checkbox">Sin texto superior</label>
             </fieldset>
             <fieldset class="section__txt">
                 <legend for="">INFERIOR</legend>
-                <input type="text" name="" id="" value="BOTTOM TEXT" class="info__txt general__style-edition_section"></input>
+                <input type="text" name="bottom__text" id="bottom__text" value="BOTTOM TEXT" class="info__txt general__style-edition_section"></input>
                 <input type="checkbox" name="" id="inferior_check"> 
                 <label for="inferior_check" class="label_checkbox">Sin texto inferior</label> 
             </fieldset>

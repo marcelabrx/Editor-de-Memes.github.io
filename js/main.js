@@ -110,3 +110,14 @@ $(".btn__reset").addEventListener("click", () =>{
     $("#negative").value = "0"
     $(".section__box").style.filter = "none"
 })
+
+// *********section-text*************
+// insert superior text
+$("#top__text").addEventListener("input", () =>{
+    $("#superior__text").innerText = $("#top__text").value
+})
+
+// insert inferior text
+$("#bottom__text").addEventListener("input", () =>{
+    $("#inferior__text").innerText = $("#bottom__text").value
+})
