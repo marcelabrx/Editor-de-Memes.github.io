@@ -40,11 +40,17 @@ $("#txt_btn").addEventListener("click", () =>{
     $(".btn__xmark").classList.remove("hidden")
     $(".edition__image").classList.add("hidden")
 })
-$("#txt_btn")
 
+//btn close pannel
 $(".btn__xmark ").addEventListener("click", () => {
     $(".edition__image").classList.add("hidden") || $(".edition__text").classList.add("hidden")
     $(".aside").style.display = "none"
     // $(".aside").classList.add("hidden")
     $(".btn__xmark").classList.add("hidden")
+})
+
+// *********section-image*************
+// url image 
+$("#url__meme").addEventListener("input", () =>{
+    $(".section__box").style.backgroundImage = `url(${$("#url__meme").value})`
 })

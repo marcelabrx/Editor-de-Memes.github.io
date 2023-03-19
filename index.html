@@ -52,70 +52,70 @@
         </button>
     </main>
     <!--*********ASIDE***********-->
-    <aside class="aside">
+    <aside class="aside hidden">
         <!--*******meme edition section*******-->
         <!-- image section-->
         <button class="btn__xmark" value="cerrar"><i class="fa-solid fa-xmark "></i></button>
         <section class="edition__image">
             <h2 class="aside__title">IMAGEN</h2>
-            <fieldset>
-                <legend>URL</legend>
-                <input type="text" name="" id="" class="general__style-edition_section">
-            </fieldset>
-            <fieldset class="section__background_meme"> 
-                <legend>FONDO</legend>
-                <div class="background__meme_color general_input_color general__style-edition_section">
-                    <input type="color" name="" id="colorFond" value="#FFFFFF">
-                    <label for="colorFond" class="background__meme_color">#FFFFFF</label>
-                </div>
-                <select class="background__meme_option general__style-edition_section">
-                    <option value="">Ninguno</option>
-                    <option value="">Aclarar</option>
-                    <option value="">Oscurecer</option>
-                    <option value="">Diferencia</option>
-                    <option value="">Luminosidad</option>
-                    <option value="">Multiplicar</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <legend>FILTROS</legend>
-                <div class="filter__box">
-                    <label for="">BRILLO</label>
-                    <input type="range" name="" id="" value="100">
-                </div>
-                <div class="filter__box">
-                    <label for="">OPACIDAD</label>
-                    <input type="range" name="" id="" value="100">
-                </div>
-                <div class="filter__box"> 
-                    <label for="">CONTRASTE</label>
-                    <input type="range" name="" id="" value="0">
-                </div class="filter__box">
-                <div class="filter__box">
-                    <label for="">DESENFOQUE</label>
-                    <input type="range" name="" id="" value="0">
-                </div>
-                <div class="filter__box">
-                    <label for="">ESCALA DE GRISES</label>
-                    <input type="range" name="" id="" value="0">
-                </div>
-                <div class="filter__box">
-                    <label for="">SEPIA</label>
-                    <input type="range" name="" id="" value="0">
-                </div>
-                <div class="filter__box">
-                    <label for="">HUE</label>
-                    <input type="range" name="" id="" value="0">
-                </div>
-                <div class="filter__box">
-                    <label for="">SATURADO</label>
-                    <input type="range" name="" id="" value="0">
-                </div>
-                <div class="filter__box">
-                    <label for="">NEGATIVO</label>
-                    <input type="range" name="" id="" value="0">
-                </div>
-            </fieldset>
+                <fieldset>
+                    <legend>URL</legend>
+                    <input type="text" name="url__meme" id="url__meme" class="general__style-edition_section">
+                </fieldset>
+                <fieldset class="section__background_meme"> 
+                    <legend>FONDO</legend>
+                    <div class="background__meme_color general_input_color general__style-edition_section">
+                        <input type="color" name="back__color" id="back__color" value="#FFFFFF">
+                        <label for="back__color" id="name__color" class="background__meme_color">#FFFFFF</label>
+                    </div>
+                    <select id="blend__img" class="background__meme_option general__style-edition_section">
+                        <option value="normal">Ninguno</option>
+                        <option value="lighten">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplicar</option>
+                    </select>
+                </fieldset>
+                <form id="filter__form">
+                    <legend>FILTROS</legend>
+                    <div class="filter__box">
+                        <label for="">BRILLO</label>
+                        <input type="range" name="brightness" id="brightness" value="1" min="0" max="1" step="0.1">
+                    </div>
+                    <div class="filter__box">
+                        <label for="">OPACIDAD</label>
+                        <input type="range" name="opacity" id="opacity" value="1" min="0" max="1" step="0.1">
+                    </div>
+                    <div class="filter__box"> 
+                        <label for="">CONTRASTE</label>
+                        <input type="range" name="contrast" id="contrast" value="100" min="100" max="1000" step="1">
+                    </div>
+                    <div class="filter__box">
+                        <label for="">DESENFOQUE</label>
+                        <input type="range" name="blur" id="blur"  value="0" min="0" max="10" step="0.1">
+                    </div>
+                    <div class="filter__box">
+                        <label for="">ESCALA DE GRISES</label>
+                        <input type="range" name="gray__scale" id="gray__scale" value="0" min="0" max="100" step="1" >
+                    </div>
+                    <div class="filter__box">
+                        <label for="">SEPIA</label>
+                        <input type="range" name="sepia" id="sepia" value="0" min="0" max="100" step="1">
+                    </div>
+                    <div class="filter__box">
+                        <label for="">HUE</label>
+                        <input type="range" name="hue" id="hue" value="0" min="0" max="359" step="1">
+                    </div>
+                    <div class="filter__box">
+                        <label for="">SATURADO</label>
+                        <input type="range" name="saturation" id="saturation" value="100" min="100" max="1000" step="10">
+                    </div>
+                    <div class="filter__box">
+                        <label for="">NEGATIVO</label>
+                        <input type="range" name="negative" id="negative" value="0" min="0" max="1" step="0.1" >
+                    </div>
+                </form>
             <button type="submit" class="btn__reset general__style-edition_section">Reestablecer Filtros</button>
         </section>
         <!-- text section-->

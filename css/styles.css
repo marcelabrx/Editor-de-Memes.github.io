@@ -210,6 +210,7 @@ input[type = "color"]{
     cursor: pointer;
     border: none;
     margin: 3px 5px 5px 5px;
+    
 }
 input[type = "color"]::-webkit-color-swatch{
     border-radius: 100%;
@@ -392,14 +393,13 @@ input[type = "color"]:active,
         display: flex;
         max-width: 24%;
         max-height: 100%;
-        /* z-index: 10; */
     }
     .btn__xmark{
         display: none;
     }
-    /* .edition__image{
+    .edition__image{
         display: block;
-    } */
+    }
     .navbar__btn:hover,
     .general__style-edition_section:hover,
     input[type = "color"]:hover,
