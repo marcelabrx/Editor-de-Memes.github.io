@@ -121,3 +121,22 @@ $("#top__text").addEventListener("input", () =>{
 $("#bottom__text").addEventListener("input", () =>{
     $("#inferior__text").innerText = $("#bottom__text").value
 })
+
+//-----buttons checked-------
+//superior check
+$("#superior__check").addEventListener("input", () => {
+    if ($("#superior__check").checked){
+        $("#superior__text").classList.add("hidden")
+    } else{
+        $("#superior__text").classList.remove("hidden")
+    }
+})
+
+//inferior check
+$("#inferior__check").addEventListener("input", () => {
+    if ($("#inferior__check").checked){
+        $("#inferior__text").classList.add("hidden")
+    } else{
+        $("#inferior__text").classList.remove("hidden")
+    }
+})
