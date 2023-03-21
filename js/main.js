@@ -205,3 +205,9 @@ $("#contour__dark").addEventListener("click", () =>{
     $("#superior__text").style.textShadow = "-2px -2px 2px #000, 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000"
     $("#inferior__text").style.textShadow = "-2px -2px 2px #000, 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000"
 })
+
+//spacing
+$("#spacing__txt").addEventListener("input", () =>{
+    $("#superior__text").style.padding = `${$("#spacing__txt").value}px`
+    $("#inferior__text").style.padding = `${$("#spacing__txt").value}px`
+})
