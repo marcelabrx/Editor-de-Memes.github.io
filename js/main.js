@@ -2,28 +2,28 @@
 const $ = (selector) => document.querySelector(selector) 
 
 // dark and light mode
-$("#light-theme").addEventListener("click", () =>{
-    const changeTheme = $("body").getAttribute("data-theme")
-    if ("body" != changeTheme){
-        $("#dark-theme").classList.remove("hidden")
-        $("#light-theme").classList.add("hidden")
-        $("body").removeAttribute("data-theme", "dark_theme")
+$("#light__mode").addEventListener("click", () =>{
+    const askingTheme = $("body").getAttribute("data-theme")
+    if ("body" != askingTheme){
+        $("#dark__mode").classList.remove("hidden")
+        $("#light__mode").classList.add("hidden")
+        $("body").removeAttribute("data-theme", "dark__mode")
     } else{
-        $("#dark-theme").classList.add("hidden")
-        $("#light-theme").classList.remove("hidden")
-        $("body").setAttribute("data-theme", "dark_theme")
+        $("#dark__mode").classList.add("hidden")
+        $("#light__mode").classList.remove("hidden")
+        $("body").setAttribute("data-theme", "dark__mode")
     }
 })
 $("#dark-theme").addEventListener("click", () =>{
-    const addTheme = $("body").getAttribute("data-theme")
-    if ("body" != addTheme){
-        $("#dark-theme").classList.add("hidden")
-        $("#light-theme").classList.remove("hidden")
-        $("body").setAttribute("data-theme", "dark_theme")
+    const queryingTheme = $("body").getAttribute("data-theme")
+    if ("body" != queryingTheme){
+        $("#dark__mode").classList.add("hidden")
+        $("#light__mode").classList.remove("hidden")
+        $("body").setAttribute("data-theme", "dark__mode")
     } else{
-        $("#dark-theme").classList.remove("hidden")
-        $("#light-theme").classList.add("hidden")
-        $("body").removeAttribute("data-theme", "dark_theme")
+        $("#dark__mode").classList.remove("hidden")
+        $("#light__mode").classList.add("hidden")
+        $("body").removeAttribute("data-theme", "dark__mode")
     }
 })
 
@@ -217,3 +217,12 @@ $("#linespacing__txt").addEventListener("input", () =>{
     $("#superior__text").style.lineHeight = $("#linespacing__txt").value
     $("#inferior__text").style.lineHeight = $("#linespacing__txt").value
 })
+
+//download meme 
+const downloadMeme = () => {
+    domtoimage.toBlob($("#my__meme")).then((blob) => {
+        saveAs(blob, "my__meme.png")
+    })
+}
+
+$("#download__meme").addEventListener('click', downloadMeme)

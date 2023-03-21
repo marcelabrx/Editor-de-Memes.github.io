@@ -21,19 +21,19 @@
         <h1 class="header__title">Generador de Memes</h1>
         <!--*******nav-bar options section*******-->
         <nav class="header__navbar">
-            <button id="image_btn" class="navbar__btn">
+            <button id="image__btn" class="navbar__btn">
                 <i class="fa-solid fa-file-image icon"></i> 
                 Imagen
             </button>
-            <button id="txt_btn" class="navbar__btn" aria-hidden="true">
+            <button id="txt__btn" class="navbar__btn">
                 <i class="fas fa-font icon"></i>
                 Texto
             </button>
-            <button id="dark-theme" class="navbar__btn" aria-hidden="true">
+            <button id="dark__mode" class="navbar__btn">
                 <i class="fa-solid fa-lightbulb icon" id="lightbulb-on"></i>
                 Modo Oscuro
             </button>
-            <button id="light-theme" class="navbar__btn hidden"> 
+            <button id="light__mode" class="navbar__btn hidden"> 
                 <i class="fa-regular fa-lightbulb icon"></i>
                 Modo Claro
             </button>
@@ -42,12 +42,12 @@
     <!--*********MAIN***********-->
     <main class="main">
         <!--*******meme preview section*******-->
-        <section class="main__section">
+        <section id="my__meme" class="main__section">
             <p id="superior__text" class="section__text">TOP TEXT</p>
             <div class="section__box"></div>
             <p id="inferior__text" class="section__text">BOTTOM TEXT</p>
         </section>
-        <button class="btn__green">
+        <button id="download__meme" class="btn__green">
             <i class="fa-solid fa-download"></i> Descargar meme
         </button>
     </main>

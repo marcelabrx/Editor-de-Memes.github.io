@@ -18,7 +18,7 @@
     --secondary-family-font: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     --general-legend-color: #212121b3;
 }
-[data-theme="dark_theme"]{
+[data-theme="dark__mode"]{
     --header-color :  #191e2b;
     --text-color: #ffffff;
     --body-background-color: #30343f;
