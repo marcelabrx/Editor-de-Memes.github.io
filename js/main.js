@@ -152,3 +152,22 @@ $("#font__number").addEventListener("input", () =>{
     $("#superior__text").style.fontSize = `${$("#font__number").value}px`
     $("#inferior__text").style.fontSize = `${$("#font__number").value}px`
 })
+
+//-----change Align-text-----
+//text align - left
+$("#text__left").addEventListener("click", () =>{
+    $("#superior__text").style.textAlign = "left"
+    $("#inferior__text").style.textAlign = "left"
+})
+
+//text align - center
+$("#text__center").addEventListener("click", () =>{
+    $("#superior__text").style.textAlign = "center"
+    $("#inferior__text").style.textAlign = "center"
+})
+
+//text align - right
+$("#text__right").addEventListener("click", () =>{
+    $("#superior__text").style.textAlign = "right"
+    $("#inferior__text").style.textAlign = "right"
+})
