@@ -146,3 +146,9 @@ $("#fonts__meme").addEventListener("input", () =>{
     $("#superior__text").style.fontFamily = $("#fonts__meme").value
     $("#inferior__text").style.fontFamily = $("#fonts__meme").value
 })
+
+//-----change Font-size-----
+$("#font__number").addEventListener("input", () =>{
+    $("#superior__text").style.fontSize = `${$("#font__number").value}px`
+    $("#inferior__text").style.fontSize = `${$("#font__number").value}px`
+})
