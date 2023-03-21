@@ -140,3 +140,9 @@ $("#inferior__check").addEventListener("input", () => {
         $("#inferior__text").classList.remove("hidden")
     }
 })
+
+// -----change Font-family-----
+$("#fonts__meme").addEventListener("input", () =>{
+    $("#superior__text").style.fontFamily = $("#fonts__meme").value
+    $("#inferior__text").style.fontFamily = $("#fonts__meme").value
+})
