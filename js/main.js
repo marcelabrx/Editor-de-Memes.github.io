@@ -186,3 +186,22 @@ $("#found__txt").addEventListener("input", () =>{
     $("#inferior__text").style.backgroundColor = $("#found__txt").value
     $("#found__label").innerText = ($("#found__txt").value).toUpperCase()
 })
+
+//------ change letter contour ------
+//contour none
+$("#contour__none").addEventListener("click", () =>{
+    $("#superior__text").style.textShadow = "none"
+    $("#inferior__text").style.textShadow = "none"
+})
+
+//contour light
+$("#contour__light").addEventListener("click", () =>{
+    $("#superior__text").style.textShadow = "-2px -2px 0px #fff, 2px -2px 0px #fff, -2px 2px 0px #fff, 2px 2px 0px #fff"
+    $("#inferior__text").style.textShadow = "-2px -2px 0px #fff, 2px -2px 0px #fff, -2px 2px 0px #fff, 2px 2px 0px #fff"
+})
+
+//contour dark 
+$("#contour__dark").addEventListener("click", () =>{
+    $("#superior__text").style.textShadow = "-2px -2px 2px #000, 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000"
+    $("#inferior__text").style.textShadow = "-2px -2px 2px #000, 2px 2px 2px #000, -2px 2px 2px #000, 2px -2px 2px #000"
+})
