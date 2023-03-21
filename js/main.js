@@ -171,3 +171,18 @@ $("#text__right").addEventListener("click", () =>{
     $("#superior__text").style.textAlign = "right"
     $("#inferior__text").style.textAlign = "right"
 })
+
+//-----change background-color and color font-----
+//color 
+$("#color__txt").addEventListener("input", () =>{
+    $("#superior__text").style.color = $("#color__txt").value
+    $("#inferior__text").style.color = $("#color__txt").value
+    $("#color__label").innerText = ($("#color__txt").value).toUpperCase()
+})
+
+//background color
+$("#found__txt").addEventListener("input", () =>{
+    $("#superior__text").style.backgroundColor = $("#found__txt").value
+    $("#inferior__text").style.backgroundColor = $("#found__txt").value
+    $("#found__label").innerText = ($("#found__txt").value).toUpperCase()
+})
