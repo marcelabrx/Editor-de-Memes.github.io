@@ -211,3 +211,9 @@ $("#spacing__txt").addEventListener("input", () =>{
     $("#superior__text").style.padding = `${$("#spacing__txt").value}px`
     $("#inferior__text").style.padding = `${$("#spacing__txt").value}px`
 })
+
+//line spacing
+$("#linespacing__txt").addEventListener("input", () =>{
+    $("#superior__text").style.lineHeight = $("#linespacing__txt").value
+    $("#inferior__text").style.lineHeight = $("#linespacing__txt").value
+})
