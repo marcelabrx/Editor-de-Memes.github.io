@@ -43,10 +43,9 @@ $("#txt__btn").addEventListener("click", () =>{
 
 //btn close pannel
 $(".btn__xmark ").addEventListener("click", () => {
-    $(".edition__image").classList.add("hidden") || $(".edition__text").classList.add("hidden")
-    $(".aside").style.display = "none"
-    // $(".aside").classList.add("hidden")
-    $(".btn__xmark").classList.add("hidden")
+    $(".aside").classList.add("hidden")
+    $(".edition__text").classList.add("hidden")
+    $(".edition__image").classList.add("hidden")
 })
 
 // *********section-image*************
