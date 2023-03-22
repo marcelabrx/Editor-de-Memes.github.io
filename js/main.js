@@ -28,16 +28,16 @@ $("#dark__mode").addEventListener("click", () =>{
 })
 
 //panel image
-$("#image_btn").addEventListener("click", () =>{
+$("#image__btn").addEventListener("click", () =>{
+    $(".aside").classList.remove("hidden")
     $(".edition__image").classList.remove("hidden")
-    $(".btn__xmark").classList.remove("hidden")
     $(".edition__text").classList.add("hidden")
 })
 
 //panel text
-$("#txt_btn").addEventListener("click", () =>{
+$("#txt__btn").addEventListener("click", () =>{
+    $(".aside").classList.remove("hidden")
     $(".edition__text").classList.remove("hidden")
-    $(".btn__xmark").classList.remove("hidden")
     $(".edition__image").classList.add("hidden")
 })
 
