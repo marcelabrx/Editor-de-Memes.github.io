@@ -30,8 +30,7 @@ $("#dark__mode").addEventListener("click", () =>{
 //panel image
 $("#image__btn").addEventListener("click", () =>{
     const remove = $(".aside").getAttribute("class")
-    remove.includes("hidden")
-    if ("aside" === remove){
+    if (remove.includes("hidden")){
         $(".edition__image").style.display = "block"
         $(".edition__text").style.display = "none"
     }else{
@@ -42,8 +41,7 @@ $("#image__btn").addEventListener("click", () =>{
 //panel text
 $("#txt__btn").addEventListener("click", () =>{
     const remove = $(".aside").getAttribute("class")
-    remove.includes("hidden")
-    if ("aside" === remove){
+    if (remove.includes("hidden")){
         $(".edition__text").style.display = "block"
         $(".edition__image").style.display = "none"
     }else{
