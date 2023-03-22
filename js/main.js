@@ -14,7 +14,7 @@ $("#light__mode").addEventListener("click", () =>{
         $("body").setAttribute("data-theme", "dark__mode")
     }
 })
-$("#dark-theme").addEventListener("click", () =>{
+$("#dark__mode").addEventListener("click", () =>{
     const queryingTheme = $("body").getAttribute("data-theme")
     if ("body" != queryingTheme){
         $("#dark__mode").classList.add("hidden")
@@ -58,6 +58,7 @@ $("#url__meme").addEventListener("input", () =>{
 //color back-image
 $("#back__color").addEventListener("input", () =>{
     $(".section__box").style.backgroundColor =  $("#back__color").value
+    $("#name__color").innerText = ($("#back__color").value).toUpperCase()
 })
 
 //blend image
