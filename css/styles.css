@@ -81,22 +81,14 @@ body{
 .color{
     color: var(--general-light-color);
 }
-.btn__green{
-    font-size: 1.5rem;
-    border: none;
-    border-radius: var(--general-border-radius);
-    background-color: var(--button-green-color);
-    color: var(--general-light-color);
-    padding: 15px 15px;
-    margin: 10px 15px;
-}
 /**********MAIN************/
 .main{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px ;
+    padding: 30px 20px ;
+    flex-grow: 1;
 }
 /*******meme preview section*******/
 .main__section{
@@ -105,10 +97,13 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin: 10px 50px;
+    margin: auto;
+    transition: all 2s;
+    position: relative;
 }
 /*******meme preview section - top and bottom text*******/
 .section__text{
+    display: block;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--general-panel-color);
     background-color:var(--general-light-color);
@@ -118,21 +113,45 @@ body{
     padding: 5px 20px;
     width: 100%;
     max-width: 500px;
+    height: 5vh;
 }
 /*******meme preview section - img *******/
 .section__box{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color:var(--general-panel-color);
-    height: 45vh;
+    height: 50vh;
     max-width: 500px;
+}
+/*******download button*******/
+.btn__green{
+    font-size: 1.5rem;
+    border: none;
+    border-radius: var(--general-border-radius);
+    background-color: var(--button-green-color);
+    color: var(--general-light-color);
+    padding: 15px 15px;
+    margin: 10px 15px;
 }
 /**********ASIDE************/
 .aside{
-    display: flex;
-    flex-direction: column;
+    background-color: var(--body-background-color);
+    display: block;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: auto;
     margin: 20px 20px 50px;
-    position: relative;
+    height: 100%;
+    width: 100%;
 }
 /* *******meme edition section******* */
 /*section image -- button x-mark*/
@@ -168,7 +187,7 @@ legend{
     margin: 8px 0 3px;
 }
 /*section image -- "url" */
-.general__style-edition_section{
+.general__style--edition_section{
     background-color: var(--header-color);
     color: var(--text-color);
     border: none;
@@ -194,7 +213,7 @@ input[type = "text"]:active{
     width: 100%;
     margin: 15px 0;
 }
-.general_input_color{
+.general__style--input_color{
     display: flex;
     align-items: center;
     justify-content: start;
@@ -216,6 +235,8 @@ input[type = "color"]::-webkit-color-swatch{
 }
 input[type=color]::-moz-color-swatch{
     border-radius: 100%;
+    width: 20px;
+    height: 20px
 }
 /*section image -- "fondo--select" */
 .background__meme_option{
@@ -268,7 +289,7 @@ input[type = "range"]::-webkit-slider-track{
 input[type = "number"]{
     padding-left: 10px;
 }
-.align_txt{
+.btn__align{
     width: 15.5%;
 }
 .section__txt_back-color{
@@ -277,7 +298,7 @@ input[type = "number"]{
     width: 100%;
     margin-bottom: 5px;
 }
-.section__txt_width{
+.special__width{
     width: 45% ;
 }
 .btn__contour{
@@ -292,7 +313,7 @@ input[type = "number"]{
 }
 /*-- "buttons that have the pseudo-class "active" --*/
 .navbar__btn:active,
-.general__style-edition_section:active,
+.general__style--edition_section:active,
 input[type = "color"]:active,
 .btn__reset:active{
     background-color: var(--button-active-color);
@@ -400,7 +421,7 @@ input[type = "color"]:active,
         display: block;
     }
     .navbar__btn:hover,
-    .general__style-edition_section:hover,
+    .general__style--edition_section:hover,
     input[type = "color"]:hover,
     .btn__reset:hover{
         background-color: var(--button-active-color);

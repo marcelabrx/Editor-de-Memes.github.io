@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crear tus propios memes nunca fue tan fácil. Con esta aplicación podras crear memes divertidos, personalizados y de forma gratuita.">
+    <meta name="keywords" content="editor de memes, imagen, texto, filtros, modo oscuro, modo claro">
     <!--Script libraries-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
@@ -63,15 +65,15 @@
             <h2 class="aside__title">IMAGEN</h2>
             <fieldset>
                 <legend>URL</legend>
-                <input type="text" name="url__meme" id="url__meme" class="general__style-edition_section">
+                <input type="text" name="url__meme" id="url__meme" class="general__style--edition_section">
             </fieldset>
             <fieldset class="section__background_meme"> 
                 <legend>FONDO</legend>
-                <div class="background__meme_color general_input_color general__style-edition_section">
+                <div class="background__meme_color general__style--input_color general__style--edition_section">
                     <input type="color" name="back__color" id="back__color" value="#FFFFFF">
                     <label for="back__color" id="name__color" class="background__meme_color">#FFFFFF</label>
                 </div>
-                <select id="blend__img" class="background__meme_option general__style-edition_section">
+                <select id="blend__img" class="background__meme_option general__style--edition_section">
                     <option value="normal">Ninguno</option>
                     <option value="lighten">Aclarar</option>
                     <option value="darken">Oscurecer</option>
@@ -119,26 +121,26 @@
                     <input type="range" name="negative" id="negative" value="0" min="0" max="1" step="0.1" >
                 </div>
             </fieldset>
-            <button type="submit" class="btn__reset general__style-edition_section">Reestablecer Filtros</button>
+            <button type="submit" class="btn__reset general__style--edition_section">Reestablecer Filtros</button>
         </section>
         <!-- text section-->
         <section class="edition__text">
             <h2 class="aside__title">TEXTO</h2>
             <fieldset class="section__txt">
                 <legend for="">SUPERIOR</legend>
-                <input type="text" name="top__text" id="top__text" value="TOP TEXT" class="info__txt general__style-edition_section"></input>
+                <input type="text" name="top__text" id="top__text" value="TOP TEXT" class="info__txt general__style--edition_section"></input>
                 <input type="checkbox" name="superior__check" id="superior__check"> 
                 <label for="superior__check" class="section__txt-checkbox">Sin texto superior</label>
             </fieldset>
             <fieldset class="section__txt">
                 <legend for="">INFERIOR</legend>
-                <input type="text" name="bottom__text" id="bottom__text" value="BOTTOM TEXT" class="info__txt general__style-edition_section"></input>
+                <input type="text" name="bottom__text" id="bottom__text" value="BOTTOM TEXT" class="info__txt general__style--edition_section"></input>
                 <input type="checkbox" name="inferior__check" id="inferior__check"> 
-                <label for="inferior__check" class="label_checkbox">Sin texto inferior</label> 
+                <label for="inferior__check">Sin texto inferior</label> 
             </fieldset>
             <fieldset> 
                 <legend>FUENTE</legend>
-                <select id="fonts__meme" class="general__style-edition_section info__txt">
+                <select id="fonts__meme" class="general__style--edition_section info__txt">
                     <option value="Arial">Arial</option>
                     <option value="Arial Black">Arial Black</option>
                     <option value="American Typewriter">American Typewriter</option>
@@ -150,45 +152,45 @@
                     <option value="Times New Roman">Times New Roman</option>
                 </select>
                 <div class="section__text_font">
-                    <input type="number" name="font__number" id="font__number" min="12" max="70" value="16" class="general__style-edition_section">
-                    <button id="text__left" class="align_txt general__style-edition_section"><i class="fa-solid fa-align-left icon"></i></button>
-                    <button id="text__center" class="align_txt general__style-edition_section"><i class="fa-solid fa-align-justify icon"></i></button>
-                    <button id="text__right" class="align_txt general__style-edition_section"><i class="fa-solid fa-align-right icon"></i></button>
+                    <input type="number" name="font__number" id="font__number" min="12" max="70" value="16" class="general__style--edition_section">
+                    <button id="text__left" class="general__style--edition_section btn__align "><i class="fa-solid fa-align-left icon"></i></button>
+                    <button id="text__center" class="general__style--edition_section btn__align"><i class="fa-solid fa-align-justify icon"></i></button>
+                    <button id="text__right" class="general__style--edition_section btn__align"><i class="fa-solid fa-align-right icon"></i></button>
                 </div>
             </fieldset>
             <fieldset >
                 <section class="section__txt_back-color">
-                    <article class="section__txt_width">
+                    <article class="special__width">
                         <legend for="">COLOR</legend>
-                        <div class="general_input_color general__style-edition_section">
+                        <div class="general__style--input_color general__style--edition_section">
                             <input type="color" name="color__txt" id="color__txt" value="#000000" >
                             <label id="color__label" for="color__txt">#000000</label>
                         </div> 
                     </article>
-                    <article class="section__txt_width">
+                    <article class="special__width">
                         <legend>FONDO</legend> 
-                        <div class="general_input_color general__style-edition_section">
+                        <div class="general__style--input_color general__style--edition_section">
                             <input type="color" name="found__txt" id="found__txt" value="#FFFFFF">
                             <label id="found__label" for="found__txt">#FFFFFF</label>
                         </div> 
                     </article>
                 </section>
-                <input type="checkbox" name="" id="transparent_back">
-                <label for="transparent_back" class="label_checkbox">Fondo transparente</label> 
+                <input type="checkbox" name="transparent__back" id="ttransparent__back">
+                <label for="transparent__back">Fondo transparente</label> 
             </fieldset>
             <fieldset class="section__txt_contour">
                 <legend>CONTORNO</legend>
-                <button id="contour__none" class="general__style-edition_section btn__contour">Ninguno</button>
-                <button id="contour__light" class="general__style-edition_section btn__contour">Claro</button>
-                <button id="contour__dark" class="general__style-edition_section btn__contour">Oscuro</button>
+                <button id="contour__none" class="general__style--edition_section btn__contour">Ninguno</button>
+                <button id="contour__light" class="general__style--edition_section btn__contour">Claro</button>
+                <button id="contour__dark" class="general__style--edition_section btn__contour">Oscuro</button>
             </fieldset>
             <fieldset>
                 <legend>ESPACIADO</legend>
-                <input type="number" name="spacing__txt" id="spacing__txt" min="10" max="50" value="6" class="general__style-edition_section info__txt">
+                <input type="number" name="spacing__txt" id="spacing__txt" min="10" max="50" value="6" class="general__style--edition_section info__txt">
             </fieldset>
             <fieldset>
                 <legend>INTERLINEADO</legend>
-                <select name="linespacing__txt" id="linespacing__txt" class="general__style-edition_section info__txt">
+                <select name="linespacing__txt" id="linespacing__txt" class="general__style--edition_section info__txt">
                     <option value="0.8">0.8</option>
                     <option value="1">1</option>
                     <option value="1.2">1.2</option>

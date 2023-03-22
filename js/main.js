@@ -1,4 +1,4 @@
-//overall constant
+//general constant
 const $ = (selector) => document.querySelector(selector) 
 
 // dark and light mode
@@ -186,6 +186,22 @@ $("#found__txt").addEventListener("input", () =>{
     $("#superior__text").style.backgroundColor = $("#found__txt").value
     $("#inferior__text").style.backgroundColor = $("#found__txt").value
     $("#found__label").innerText = ($("#found__txt").value).toUpperCase()
+})
+
+//background transparent
+$("#transparent__back").addEventListener("input", () =>{
+    if (!$("#transparent__back").checked){
+        $("#superior__text").style.background = $("#found__txt").value
+        $("#inferior__text").style.background = $("#found__txt").value
+    }else {
+        $("#superior__text").style.background = "transparent"
+        $("#inferior__text").style.background = "transparent"
+        $("#superior__text").style.top = 0
+        $("#inferior__text").style.bottom = 0
+        $("#superior__text").style.position = "absolute"
+        $("#inferior__text").style.position = "absolute"
+        $(".section__box").style.height = "65vh"
+    }
 })
 
 //------ change letter contour ------
