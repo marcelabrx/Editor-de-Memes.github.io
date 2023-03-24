@@ -33,16 +33,6 @@ $("#image__btn").addEventListener("click", () =>{
     $(".edition__image").classList.remove("hidden")
     $(".edition__text").classList.add("hidden")
 })
-// $("#image__btn").addEventListener("click", () =>{
-//     const remove = $(".aside").getAttribute("class")
-//     if (remove.includes("hidden")){
-//         $(".edition__image").classList.remove("hidden")
-//         $(".aside").classList.remove("hidden")
-//         $(".edition__text").classList.add("hidden")
-//     }else{
-//         $(".aside").classList.add("hidden")
-//     }
-// })
 
 //panel text
 $("#txt__btn").addEventListener("click", () =>{
@@ -50,16 +40,6 @@ $("#txt__btn").addEventListener("click", () =>{
     $(".edition__text").classList.remove("hidden")
     $(".edition__image").classList.add("hidden")
 })
-// $("#txt__btn").addEventListener("click", () =>{
-//     const remove = $(".aside").getAttribute("class")
-//     if (remove.includes("hidden")){
-//         $(".edition__text").classList.remove("hidden")
-//         $(".aside").classList.remove("hidden")
-//         $(".edition__image").classList.add("hidden")
-//     }else{
-//         $(".aside").classList.add("hidden")
-//     }
-// })
 
 //btn close pannel
 $(".btn__xmark ").addEventListener("click", () => {
