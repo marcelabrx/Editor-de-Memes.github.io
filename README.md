@@ -1,4 +1,4 @@
-# Editor de Memes - Marcela Britos
+# Generador de Memes - Marcela Britos
 ## ADA ITW - FrontEnd
 
 ### Final Project - Module 2
