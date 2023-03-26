@@ -6,12 +6,12 @@ const toggleTheme = () => {
     const currentTheme = $("body").getAttribute("data-theme");
     if (currentTheme === "dark__mode") {
         $("body").removeAttribute("data-theme");
-        $("#dark__mode").classList.add("hidden");
-        $("#light__mode").classList.remove("hidden");
-    } else {
-        $("body").setAttribute("data-theme", "dark__mode");
         $("#dark__mode").classList.remove("hidden");
         $("#light__mode").classList.add("hidden");
+    } else {
+        $("body").setAttribute("data-theme", "dark__mode");
+        $("#dark__mode").classList.add("hidden");
+        $("#light__mode").classList.remove("hidden");
     }
 }
 
