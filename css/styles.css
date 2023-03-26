@@ -74,10 +74,12 @@ body{
     background-color: var(--header-color);
     color: var(--text-color);
 }
+/*general style icons*/
 .icon{
     margin-right: 5px;
     font-size: 1.3rem;
 }
+/*color for icon text*/
 .color{
     color: var(--general-light-color);
 }
@@ -178,6 +180,7 @@ body{
     text-align: center;
     margin: 15px 10px;
 }
+/*general styles for fieldsets and legends*/
 fieldset{
     border: none;
     margin: 5px 0;
@@ -188,7 +191,7 @@ legend{
     color: var(--general-legend-color);
     margin: 8px 0 3px;
 }
-/*section image -- "url" */
+/*general styles for edition sections*/
 .general__style--edition_section{
     background-color: var(--header-color);
     color: var(--text-color);
@@ -198,6 +201,7 @@ legend{
     outline: none;
     height: 35px;
 }
+/*section image -- "url" */
 input[type = "text"]{
     padding: 5px 10px;
     width: 100%;
@@ -215,6 +219,7 @@ input[type = "text"]:active{
     width: 100%;
     margin: 15px 0;
 }
+/*general styles for inputs color*/
 .general__style--input_color{
     display: flex;
     align-items: center;
@@ -250,6 +255,7 @@ input[type=color]::-moz-color-swatch{
 .filter__box{
     margin: 10px 0;
 }
+/*general styles for labels*/
 label{
     font-size: 1.3rem;
 }
@@ -313,7 +319,7 @@ input[type = "number"]{
 .hidden{
     display: none;
 }
-/*-- "buttons that have the pseudo-class "active" --*/
+/*-- "adding the pseudo-class "active" --*/
 .navbar__btn:active,
 .general__style--edition_section:active,
 input[type = "color"]:active,
@@ -337,12 +343,15 @@ input[type = "color"]:active,
 /* ----------------------- MEDIA QUERYS ----------------------- */
 /* ------------ TABLET ------------ */
 @media (min-width: 768px){
+    /**********HEADER************/
     .header__title{
         font-size: 3.5rem;
     }
+    /**********MAIN************/
     .main{
         padding: 0;
     }
+    /*meme preview*/
     .main__section{
         padding: 0;
         margin: 0;
@@ -360,6 +369,7 @@ input[type = "color"]:active,
     .btn__green{
         margin-top: 35px;
     }
+    /**********ASIDE************/
     .btn__xmark{
         margin: 10px;
     }
@@ -382,6 +392,8 @@ input[type = "color"]:active,
 }
 /* ------------ DESKTOP ------------ */
 @media (min-width: 1279px) {
+    /**********MAIN************/
+    /*meme preview*/
     .main__section{
         width: 500px;
         margin: 10px 0;
@@ -399,12 +411,14 @@ input[type = "color"]:active,
     .btn__green{
         margin-top: 0;
     }
+    /**********ASIDE************/
     .aside{
         display: block;
     }
     .btn__xmark{
         display: none;
     }
+    /**********General hover************/
     .navbar__btn:hover,
     .general__style--edition_section:hover,
     input[type = "color"]:hover,

@@ -26,14 +26,17 @@
         <h1 class="header__title">Generador de Memes</h1>
         <!--*******nav-bar options section*******-->
         <nav class="header__navbar">
+            <!-- image button (open panel)-->
             <button id="image__btn" class="navbar__btn">
                 <i class="fa-solid fa-file-image icon"></i> 
                 Imagen
             </button>
+            <!-- text button (open panel)-->
             <button id="txt__btn" class="navbar__btn">
                 <i class="fas fa-font icon"></i>
                 Texto
             </button>
+            <!-- dark-mode and light-mode buttons (change theme)-->
             <button id="dark__mode" class="navbar__btn">
                 <i class="fa-solid fa-lightbulb icon" id="lightbulb-on"></i>
                 Modo Oscuro
@@ -46,27 +49,30 @@
     </header>
     <!--*********MAIN***********-->
     <main class="main">
-        <!--*******meme preview section*******-->
+        <!--*******meme preview - section*******-->
         <section id="my__meme" class="main__section">
             <p id="superior__text" class="section__text">TOP TEXT</p>
             <div class="section__box"></div>
             <p id="inferior__text" class="section__text">BOTTOM TEXT</p>
         </section>
+        <!--download meme - button-->
         <button id="download__meme" class="btn__green">
             <i class="fa-solid fa-download"></i> Descargar meme
         </button>
     </main>
     <!--*********ASIDE***********-->
     <aside class="aside hidden">
-        <!--*******meme edition section*******-->
+        <!--*******meme edition - section*******-->
         <!-- image section-->
         <button class="btn__xmark" value="cerrar"><i class="fa-solid fa-xmark"></i></button>
         <section class="edition__image">
             <h2 class="aside__title">IMAGEN</h2>
+            <!--URL - edition section-->
             <fieldset>
                 <legend>URL</legend>
                 <input type="text" name="url__meme" id="url__meme" class="general__style--edition_section">
             </fieldset>
+            <!--Background color and blend color - edition section-->
             <fieldset class="section__background_meme"> 
                 <legend>FONDO</legend>
                 <div class="background__meme_color general__style--input_color general__style--edition_section">
@@ -82,6 +88,7 @@
                     <option value="multiply">Multiplicar</option>
                 </select>
             </fieldset>
+            <!--Filters and reset filters - edition section-->
             <fieldset>
                 <legend>FILTROS</legend>
                 <div class="filter__box">
@@ -126,6 +133,7 @@
         <!-- text section-->
         <section class="edition__text hidden">
             <h2 class="aside__title">TEXTO</h2>
+            <!--top and bottom text - edition section-->
             <fieldset class="section__txt">
                 <legend for="">SUPERIOR</legend>
                 <input type="text" name="top__text" id="top__text" value="TOP TEXT" class="info__txt general__style--edition_section"></input>
@@ -138,6 +146,7 @@
                 <input type="checkbox" name="inferior__check" id="inferior__check"> 
                 <label for="inferior__check">Sin texto inferior</label> 
             </fieldset>
+            <!--change font and font size - edition section-->
             <fieldset> 
                 <legend>FUENTE</legend>
                 <select id="fonts__meme" class="general__style--edition_section info__txt">
@@ -158,6 +167,7 @@
                     <button id="text__right" class="general__style--edition_section btn__align"><i class="fa-solid fa-align-right icon"></i></button>
                 </div>
             </fieldset>
+            <!--change color text, background color text and transparent background - edition section-->
             <fieldset >
                 <section class="section__txt_back-color">
                     <article class="special__width">
@@ -170,24 +180,27 @@
                     <article class="special__width">
                         <legend>FONDO</legend> 
                         <div class="general__style--input_color general__style--edition_section">
-                            <input type="color" name="found__txt" id="found__txt" value="#FFFFFF">
-                            <label id="found__label" for="found__txt">#FFFFFF</label>
+                            <input type="color" name="back__txt" id="back__txt" value="#FFFFFF">
+                            <label id="back__label" for="back__txt">#FFFFFF</label>
                         </div> 
                     </article>
                 </section>
                 <input type="checkbox" name="transparent__back" id="transparent__back">
                 <label for="transparent__back">Fondo transparente</label> 
             </fieldset>
+            <!--contour letters - edition section-->
             <fieldset class="section__txt_contour">
                 <legend>CONTORNO</legend>
                 <button id="contour__none" class="general__style--edition_section btn__contour">Ninguno</button>
                 <button id="contour__light" class="general__style--edition_section btn__contour">Claro</button>
                 <button id="contour__dark" class="general__style--edition_section btn__contour">Oscuro</button>
             </fieldset>
+            <!--spacing letters - edition section-->
             <fieldset>
                 <legend>ESPACIADO</legend>
                 <input type="number" name="spacing__txt" id="spacing__txt" min="10" max="50" value="6" class="general__style--edition_section info__txt">
             </fieldset>
+            <!--inter-spacing letters - edition section-->
             <fieldset>
                 <legend>INTERLINEADO</legend>
                 <select name="linespacing__txt" id="linespacing__txt" class="general__style--edition_section info__txt">

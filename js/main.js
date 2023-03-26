@@ -2,30 +2,21 @@
 const $ = (selector) => document.querySelector(selector) 
 
 // dark and light mode
-$("#light__mode").addEventListener("click", () =>{
-    const askingTheme = $("body").getAttribute("data-theme")
-    if ("body" != askingTheme){
-        $("#dark__mode").classList.remove("hidden")
-        $("#light__mode").classList.add("hidden")
-        $("body").removeAttribute("data-theme", "dark__mode")
-    } else{
-        $("#dark__mode").classList.add("hidden")
-        $("#light__mode").classList.remove("hidden")
-        $("body").setAttribute("data-theme", "dark__mode")
+const toggleTheme = () => {
+    const currentTheme = $("body").getAttribute("data-theme");
+    if (currentTheme === "dark__mode") {
+        $("body").removeAttribute("data-theme");
+        $("#dark__mode").classList.add("hidden");
+        $("#light__mode").classList.remove("hidden");
+    } else {
+        $("body").setAttribute("data-theme", "dark__mode");
+        $("#dark__mode").classList.remove("hidden");
+        $("#light__mode").classList.add("hidden");
     }
-})
-$("#dark__mode").addEventListener("click", () =>{
-    const queryingTheme = $("body").getAttribute("data-theme")
-    if ("body" != queryingTheme){
-        $("#dark__mode").classList.add("hidden")
-        $("#light__mode").classList.remove("hidden")
-        $("body").setAttribute("data-theme", "dark__mode")
-    } else{
-        $("#dark__mode").classList.remove("hidden")
-        $("#light__mode").classList.add("hidden")
-        $("body").removeAttribute("data-theme", "dark__mode")
-    }
-})
+}
+
+$("#light__mode").addEventListener("click", toggleTheme);
+$("#dark__mode").addEventListener("click", toggleTheme);
 
 //panel image
 $("#image__btn").addEventListener("click", () =>{
@@ -181,17 +172,17 @@ $("#color__txt").addEventListener("input", () =>{
 })
 
 //background color
-$("#found__txt").addEventListener("input", () =>{
-    $("#superior__text").style.backgroundColor = $("#found__txt").value
-    $("#inferior__text").style.backgroundColor = $("#found__txt").value
-    $("#found__label").innerText = ($("#found__txt").value).toUpperCase()
+$("#back__txt").addEventListener("input", () =>{
+    $("#superior__text").style.backgroundColor = $("#back__txt").value
+    $("#inferior__text").style.backgroundColor = $("#back__txt").value
+    $("#back__label").innerText = ($("#back__txt").value).toUpperCase()
 })
 
 //background transparent
 $("#transparent__back").addEventListener("input", () =>{
     if (!$("#transparent__back").checked){
-        $("#superior__text").style.background = $("#found__txt").value
-        $("#inferior__text").style.background = $("#found__txt").value
+        $("#superior__text").style.background = $("#back__txt").value
+        $("#inferior__text").style.background = $("#back__txt").value
     }else {
         $("#superior__text").style.background = "transparent"
         $("#inferior__text").style.background = "transparent"
